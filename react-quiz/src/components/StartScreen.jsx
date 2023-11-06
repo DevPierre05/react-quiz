@@ -6,9 +6,13 @@ function StartScreen({numberQuestions, handleStart, highScore, difficulty, dispa
       <div className="bg-teal-700 mt-2 p-5 px-8 rounded-2xl text-[2rem] font-medium mb-3 sm:mt-10">
         Highscore: {highScore}
       </div>
-      <h2 className="text-[4rem] mt-10 font-bold text-center">Welcome to React Quiz</h2>
-      <h3 className="text-center">Test your knowledge on the popular JS library</h3>
-      <h4 className="">
+      <h2 className="text-[4rem] mt-10 font-bold text-center">
+        Welcome to React Quiz
+      </h2>
+      <h3 className="text-center">
+        Test your knowledge on the popular JS library
+      </h3>
+      <h4 className="text-center">
         {numberQuestions} questions to test your react mastery
       </h4>
       <div className="flex gap-5">
