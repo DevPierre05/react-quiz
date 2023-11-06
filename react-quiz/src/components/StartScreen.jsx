@@ -3,7 +3,7 @@
 function StartScreen({numberQuestions, handleStart, highScore, difficulty, dispatch}) {
   return (
     <div className="start">
-      <div className="bg-teal-700 mt-2 p-5 px-8 rounded-2xl text-[2rem] font-medium mb-3 sm:mt-10">
+      <div className="bg-teal-700 p-5 px-8 rounded-2xl text-[2rem] font-medium mb-3">
         Highscore: {highScore}
       </div>
       <h2 className="text-[4rem] mt-10 font-bold text-center">
@@ -32,7 +32,7 @@ function StartScreen({numberQuestions, handleStart, highScore, difficulty, dispa
           <option value="hard">Hard</option>
         </select>
       </div>
-      <button onClick={handleStart} className="btn btn-ui mt-20">
+      <button onClick={handleStart} className="btn btn-ui mt-10">
         Let's start
       </button>
     </div>

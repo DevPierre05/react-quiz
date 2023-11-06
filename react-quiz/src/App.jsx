@@ -144,7 +144,7 @@ function App() {
   }
 
   return (
-    <div className="app">
+    <div className="max-w-7xl mx-auto min-h-screen px-8 flex flex-col justify-center md:px-8">
       <Header />
       <Main>
         {status === "loading" && <Loader />}
