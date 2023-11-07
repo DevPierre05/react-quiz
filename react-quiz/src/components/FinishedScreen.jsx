@@ -12,12 +12,16 @@ function FinishedScreen({score, maxPossibleScore, dispatch, highScore, seconds})
 
   return (
     <>
-      {seconds === 0 && <p className="text-[2rem] text-center">🛑 Time Out</p>}
-      <p className="result mt-5 p-4">
+      {seconds === 0 && (
+        <p className="text-[2rem] text-center mt-10">🛑 Time Out</p>
+      )}
+      <p className="result mt-10 p-4">
         You had {score} out of {maxPossibleScore}points score (
         {Math.ceil(percentage)}%) {emoji}
       </p>
-      <p className="highscore">Highest Score: {highScore} points</p>
+      <p className="highscore">
+        Highest Score: <strong>{highScore} points</strong>
+      </p>
       <button
         onClick={() => dispatch({ type: "answersDisplay" })}
         className="mt-5 btn-left btn"

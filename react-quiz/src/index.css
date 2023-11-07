@@ -31,7 +31,6 @@ html {
 body {
   color: var(--color-light);
   background-color: var(--color-darkest);
-  /* background-image: url("https://images.unsplash.com/photo-1514477881853-b5ceab30d586?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); */
 }
 
 .app {
@@ -44,14 +43,6 @@ body {
 .main {
   width: 50rem;
 }
-
-/* .app-header {
-  width: 66rem;
-  margin-bottom: 4rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-} */
 
 .error {
   text-align: center;
@@ -68,7 +59,6 @@ img {
 
 h1 {
   font-family: "Codystar";
-  /* font-family: 'Philosopher', sans-serif; */
   font-size: 5.6rem;
 }
 
@@ -190,10 +180,11 @@ progress {
   color: var(--color-light);
   border-radius: 10px;
   text-align: center;
-  padding: 2rem 1.5rem;
-  font-size: 2rem;
+  padding: 3rem 1.5rem;
+  font-size: 2.5rem;
   font-weight: 500;
-  margin-bottom: 1.6rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 .result span {
@@ -202,7 +193,7 @@ progress {
 }
 
 .highscore {
-  font-size: 1.8rem;
+  font-size: 2rem;
   text-align: center;
   margin-bottom: 4.8rem;
 }
@@ -296,15 +287,12 @@ progress {
 
 
 @media (max-width: 480px) {
-
   html {
     font-size: 58.5%;
   }
-
-  
   .btn {
-    font-size: 1.8rem;
-    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    padding: 0.8rem 1.8rem;
     border-radius: 30px;
   }
   .start {
@@ -322,6 +310,11 @@ progress {
     font-size: 1.8rem;
     margin-top: 0;
     font-style: italic;
+  }
+
+  .result {
+    padding: 2rem 1.5rem;
+    font-size: 2rem;
   }
 
 }
