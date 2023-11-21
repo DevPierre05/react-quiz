@@ -1,5 +1,8 @@
 /* eslint-disable react/prop-types */
-function Options({ question, answer, handleScore }) {
+import { useQuiz } from "../context/QuizContext";
+
+function Options({ question }) {
+  const { answer, handleScore } = useQuiz();
   const hasAnswered = answer !== null;
   return (
     <div className="options">

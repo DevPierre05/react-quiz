@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { useQuiz } from "../context/QuizContext";
 
 Progress.propTypes = {
   numberQuestions: PropTypes.number,
@@ -8,8 +9,8 @@ Progress.propTypes = {
   answer: PropTypes.number
 };
 
-function Progress({ numberQuestions, score, index, maxPossibleScore, answer }) {
-  // const progressLevel = (index  * 100) / numberQuestions;
+function Progress() {
+  const { numberQuestions, score, index, maxPossibleScore, answer } = useQuiz()
   return (
     <div className="w-full">
       <progress value={index + Number(answer !== null)} max={numberQuestions}></progress>

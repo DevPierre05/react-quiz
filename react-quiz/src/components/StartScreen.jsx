@@ -1,6 +1,9 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/no-unescaped-entities */
-function StartScreen({numberQuestions, handleStart, highScore, difficulty, dispatch}) {
+import { useQuiz } from "../context/QuizContext";
+
+function StartScreen () {
+  const {numberQuestions, handleStart, highScore, difficulty, dispatch} = useQuiz();
   return (
     <div className="start">
       <div className="bg-teal-700 p-5 px-8 rounded-2xl text-[2rem] font-medium mb-3">
@@ -39,4 +42,4 @@ function StartScreen({numberQuestions, handleStart, highScore, difficulty, dispa
   );
 }
 
-export default StartScreen
+export default StartScreen;

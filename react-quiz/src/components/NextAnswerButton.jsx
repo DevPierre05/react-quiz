@@ -1,5 +1,7 @@
 import PropTypes from "prop-types";
-function NextAnswerButton({handleNext, index, numberQuestions}) {
+import { useQuiz } from "../context/QuizContext";
+function NextAnswerButton() {
+  const {handleNext, index, numberQuestions} = useQuiz();
   return (
     <div>
       <button
@@ -15,7 +17,7 @@ function NextAnswerButton({handleNext, index, numberQuestions}) {
 
 NextAnswerButton.propTypes = {
   answer: PropTypes.number || PropTypes.null,
-  handleNext: PropTypes.func.isRequired,
+  handleNext: PropTypes.func.isRequired || PropTypes.null,
   index: PropTypes.number,
   numberQuestions: PropTypes.number,
 };

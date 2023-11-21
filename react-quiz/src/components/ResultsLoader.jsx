@@ -1,7 +1,9 @@
 import { useEffect } from "react";
 import PropTypes from "prop-types";
+import { useQuiz } from "../context/QuizContext";
 
-export default function ResultsLoader({dispatch}) {
+export default function ResultsLoader() {
+  const {dispatch} = useQuiz();
   const TIMEOUT = 3000;
 
   useEffect(() => {
@@ -18,5 +20,5 @@ export default function ResultsLoader({dispatch}) {
 }
 
 ResultsLoader.propTypes = {
-  dispatch: PropTypes.func.isRequired,
+  dispatch: PropTypes.func,
 };

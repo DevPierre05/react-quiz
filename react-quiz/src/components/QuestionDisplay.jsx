@@ -1,8 +1,10 @@
 /* eslint-disable react/prop-types */
+import { useQuiz } from "../context/QuizContext";
 import Options from "./Options";
 
-function QuestionDisplay({answer, question, handleScore}) {
-
+function QuestionDisplay() {
+  const { question } = useQuiz();
+  
   return (
     <div className="mt-5 w-full">
       <div className="mt-10">
@@ -11,12 +13,10 @@ function QuestionDisplay({answer, question, handleScore}) {
         </h2>
         <Options
           question={question}
-          answer={answer}
-          handleScore={handleScore}
         />
       </div>
     </div>
   );
 }
 
-export default QuestionDisplay
+export default QuestionDisplay;
